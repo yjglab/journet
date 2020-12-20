@@ -1,0 +1,255 @@
+#window {
+  width: 67.2vh;
+  height: 67.2vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+  /* background: rgb(166, 160, 218); */
+  background: linear-gradient(
+    0deg,
+    rgba(166, 160, 218, 1) 0%,
+    rgba(252, 171, 205, 1) 81%
+  );
+  border-radius: 50%;
+
+  box-shadow: 0px 0px 1vw 0.33vw rgba(39, 39, 39, 0.39);
+
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.4s ease-in-out;
+}
+#window-frame {
+  width: 85.7vh;
+  height: 85.7vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: 2;
+  transition: 0.4s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#window-frame img {
+  width: 100%;
+  height: 100%;
+}
+.window__Shadow {
+  width: 50%;
+  height: 100%;
+  background-color: #2f2f2f25;
+  /* background: rgb(255, 255, 255); */
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(67, 0, 77, 0.322) 100%
+  );
+  float: right;
+
+  position: relative;
+  z-index: 1;
+}
+
+.land {
+  position: absolute;
+  border-radius: 50px;
+}
+.land:nth-child(1) {
+  width: 11vh;
+  height: 3vh;
+  top: 10%;
+
+  animation: housemove 110s infinite linear;
+  animation-delay: -2s;
+}
+.land:nth-child(1) img {
+  width: 270%;
+}
+.land:nth-child(2) {
+  width: 1.3vh;
+  height: 1.3vh;
+  top: 47%;
+  filter: blur(2px);
+  animation: housemove 20s infinite linear;
+  animation-delay: -2s;
+}
+.land:nth-child(2) img {
+  width: 89%;
+}
+.land:nth-child(5) {
+  width: 2vh;
+  height: 2vh;
+  top: 10%;
+
+  animation: housemove 10s infinite linear;
+  animation-delay: -1.5s;
+}
+.land:nth-child(5) img {
+  width: 89%;
+}
+
+.land:nth-child(6) {
+  width: 3vh;
+  height: 3vh;
+  top: 30%;
+  animation: witchmove 14s infinite linear;
+  animation-delay: -6s;
+}
+.land:nth-child(6) img {
+  width: 130%;
+}
+.land:nth-child(7) {
+  top: 39%;
+  width: 11vh;
+  height: 3vh;
+  animation: housemove 14s infinite linear;
+  animation-delay: -4.5s;
+}
+.land:nth-child(7) img {
+  width: 22%;
+}
+.land:nth-child(8) {
+  width: 30vh;
+  height: 22vh;
+  top: 15%;
+  opacity: 0.8;
+  animation: housemove 70s infinite linear;
+  animation-delay: -19s;
+}
+.land:nth-child(8) img {
+  width: 27%;
+}
+.land:nth-child(9) {
+  width: 18vh;
+  height: 12vh;
+  filter: blur(2px);
+  top: 60%;
+  opacity: 0.8;
+  animation: housemove 90s infinite linear;
+  animation-delay: -5.6s;
+}
+.land:nth-child(9) img {
+  width: 32%;
+}
+.land:nth-child(10) {
+  width: 100%;
+  height: 100%;
+  top: 56%;
+  opacity: 0;
+  animation: bottommove 70s infinite linear;
+  animation-delay: -30s;
+}
+.land:nth-child(10) img {
+  width: 140%;
+}
+.land:nth-child(11) {
+  width: 100%;
+  height: 100%;
+  top: 37%;
+  opacity: 0;
+  animation: bottommove 70s infinite linear;
+  animation-delay: 9s;
+}
+.land:nth-child(11) img {
+  width: 140%;
+}
+
+.cloud {
+  position: absolute;
+  border-radius: 50px;
+  opacity: 0;
+}
+.cloud:first-child {
+  width: 8vh;
+  height: 4vh;
+  top: 5%;
+
+  animation: mymove 28s infinite linear;
+  animation-delay: -2.9s;
+}
+.cloud:nth-child(2) {
+  width: 15vh;
+  height: 3vh;
+  top: 27%;
+
+  animation: mymove 27s infinite linear;
+  animation-delay: -8.2s;
+}
+.cloud:nth-child(3) {
+  width: 12vh;
+  height: 5vh;
+  top: 50%;
+
+  animation: mymove 17s infinite linear;
+  animation-delay: 6s;
+}
+
+.cloud:nth-child(4) {
+  width: 8vh;
+  height: 3vh;
+  top: 84%;
+
+  animation: mymove 32s infinite linear;
+  animation-delay: 20s;
+}
+.cloud:nth-child(5) {
+  width: 14vh;
+  height: 3vh;
+  top: 90%;
+
+  animation: mymove 24s infinite linear;
+  animation-delay: 4.2s;
+}
+.cloud:nth-child(6) {
+  width: 14vh;
+  height: 3vh;
+  top: 65%;
+
+  animation: mymove 22s infinite linear;
+  animation-delay: -4.2s;
+}
+
+@keyframes mymove {
+  from {
+    opacity: 1;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: -75%;
+  }
+}
+
+@keyframes housemove {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes witchmove {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -250%;
+  }
+}
+
+@keyframes bottommove {
+  from {
+    opacity: 1;
+    left: 100%;
+  }
+  to {
+    opacity: 1;
+    left: -120%;
+  }
+}
