@@ -33,7 +33,7 @@ body {
   position: fixed;
 
   background-color: rgb(0, 0, 0, 0.9);
-  z-index: 99;
+  z-index: 101;
 }
 
 .loading-wrapper {
